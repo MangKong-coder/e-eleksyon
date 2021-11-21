@@ -1,4 +1,3 @@
-vue cli
 django rest
 git
 

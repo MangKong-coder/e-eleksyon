@@ -1,7 +1,6 @@
-import {Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import AddElection from './components/AddElection'
-import './App.css';
+
 
 
 function App() {
@@ -9,12 +8,11 @@ function App() {
   const onSubmit = (title) => {
     const newTitle = title;
     setTitles([...titles, newTitle])
-    console.log(titles);
   }
 
   return (
     <div className="App">
-      <AddElection onSubmit={onSubmit} />
+        <AddElection onSubmit={onSubmit} />
     </div>
   );
 }

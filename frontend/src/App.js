@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Routes, Route, Link } from "react-router-dom";
 import AddElection from './components/AddElection'
-
+import Success from './components/Success'
 
 
 function App() {
@@ -12,7 +13,11 @@ function App() {
 
   return (
     <div className="App">
-        <AddElection onSubmit={onSubmit} />
+      <Routes>
+        <Route path="/" element={<AddElection onSubmit={onSubmit} />}/>
+        <Route path="/success" element={<Success />}/>
+      </Routes>
+        
     </div>
   );
 }
